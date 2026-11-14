@@ -1,0 +1,6 @@
+{
+  "name": "Kineta Atelier",
+  "description": "Kinetic Optics & Tactile Interfaces — Spatial interaction studio featuring proximity-triggered fluid X-ray optics, multi-depth parallax, and responsive micro-interactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

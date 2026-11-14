@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #0b0b0d;
+    color: #f4f3ef;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbar for dark architectural surface */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #26262c;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3d46;
+}
+
+/* Fluid cursor hides system pointer only on desktop fine-pointer interaction */
+@media (hover: hover) and (pointer: fine) {
+  html.fluid-cursor-active,
+  html.fluid-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Subtle horizontal marquee keyframe */
+@keyframes kineta-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-kineta-marquee {
+  animation: kineta-marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kineta-marquee {
+    animation: none;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
